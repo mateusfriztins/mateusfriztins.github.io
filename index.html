@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha loja de Roupas</title>
+
+    <meta name="description" content="Encontre os melhores vestidos, blusas e mais na
+    nossa loja de roupas femininas. Oferecemos uma grande variadade de produtos da moda." />
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    
+</head>
+<body>
+    <header role="heading">
+        <h1>WOWY-Company</h1>
+        <a  class="carrinho" href="#"> <i class="fas fa-shopping-cart"> </i>
+            <span id="contador-carrinho">0</span>
+            </a>
+
+    </header>
+
+    <main role="main">
+        <section class="produtos">
+            <div class="produto">
+                <div class="container-imagem">
+                    <img src="https://images.tcdn.com.br/img/img_prod/759897/vestido_longo_floral_fundo_azul_6104909_1_9be35c7773a45c09a5f8c4e75c5836f1.jpg"
+                     alt="imagem de um vestido floral"/>
+                </div>
+                <h2>Vestido Florata</h2>
+                <p class="preco">R$4.129,90</p>
+                <button class="botao-add-carrinho">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+            <div class="produto">
+                <div class="container-imagem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO_JdJKFBIyu0_W20-gWqjTvKynhJVxbRAkw&usqp=CAU"
+                     alt="imagem de um vestido floral"/>
+                </div>
+                <h2>Vestido Florido</h2>
+                <p class="preco">R$1.129,90</p>
+                <button class="botao-add-carrinho">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+            <div class="produto">
+                <div class="container-imagem">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJJC1adgjuIiGTvO2Y3viMRQdH8MCFiDQAhA&usqp=CAU"
+                     alt="imagem de um vestido floral"/>
+                </div>
+                <h2>Vestido Floral</h2>
+                <p class="preco">R$2.129,90</p>
+                <button class="botao-add-carrinho">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; - 2023 - Desenvolvido por Mateus LTDA</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let contador = 0;
+
+            $('.botao-add-carrinho').click(function(){
+                toastr.success('Produto Adicionado com sucesso', '', {
+                    progressBar : true
+                })
+
+                contador++;
+
+                $('#contador-carrinho').text(contador);
+            })
+        })
+    </script>
+</body>
+</html>
